@@ -23,7 +23,7 @@ end
 local alg_sign = {
 	['HS256'] = function(data, key) return openssl.hmac.digest('sha256', data, key, true) end,
 	['HS384'] = function(data, key) return openssl.hmac.digest('sha384', data, key, true) end,
-	'HS512'] = function(data, key) return openssl.hmac.digest('sha512', data, key, true) end,
+	['HS512'] = function(data, key) return openssl.hmac.digest('sha512', data, key, true) end,
 	['RS256'] = function(data, key) return signRS(data, key, 'sha256') end,
 	['RS384'] = function(data, key) return signRS(data, key, 'sha384') end,
 	['RS512'] = function(data, key) return signRS(data, key, 'sha512') end
